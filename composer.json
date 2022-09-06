@@ -1,0 +1,27 @@
+{
+  "name": "vendor_name/doctrine",
+  "description": "description",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Cliente",
+      "email": "email@example.com"
+    }
+  ],
+  "require": {
+    "doctrine/orm": "^2.11.0",
+    "doctrine/dbal": "^3.2",
+    "doctrine/annotations": "1.13.2",
+    "symfony/yaml": "^5.4",
+    "symfony/cache": "^5.4"
+  },
+  "scripts": {
+    "list-students": "php bin\\list-students.php",
+    "rename-student": "php bin\\rename-student.php",
+    "insert-student": "php bin\\insert-student.php"
+  },
+  "autoload": {
+    "psr-4": {"Alura\\Doctrine\\": "src/"}
+  }
+}
