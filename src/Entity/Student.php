@@ -20,7 +20,7 @@ class Student
     #[Column]
     public int $id;
 
-    #[OneToMany(targetEntity: Phone::class, mappedBy: 'student', cascade: ['persist'])]
+    #[OneToMany(targetEntity: Phone::class, mappedBy: 'student', cascade: ['persist', 'remove'])]
     private Collection $phones;
 
     public function __construct(
@@ -37,8 +37,8 @@ class Student
         $phone->setStudent($this);
     }
 
-    /** @return iterable<Phone> */
-    public function phones(): iterable
+    /** @return Collection<Phone> */
+    public function phones(): Collection
     {
         return $this->phones;
     }
